@@ -11,7 +11,6 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 // const { socket } = require('socket.io');
 const path = require('path');
 
-console.log("mongo"+process.env.MONGO_URI);
 
 const app = express();
 app.use(cors())
@@ -36,7 +35,7 @@ app.use("/message",messageRoutes)
 // ----------------------------------------deployemnet------------------------------------------------
 const __dirname1 = path.resolve()
 if(process.env.NODE_ENV === 'production'){
-  app.use(express.static(path.join(__dirname1,'client/build')))
+  app.use(express.static(path.join(__dirname1,'/client/build')))
 
   app.get('*',(req,res)=>{
     res.sendFile(path.resolve(__dirname1,"client","build","index.html"))
