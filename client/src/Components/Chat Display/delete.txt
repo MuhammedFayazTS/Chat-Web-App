@@ -1,0 +1,46 @@
+{ allMessages &&
+                allMessages
+                .slice(0)
+                .reverse()
+                .map((message,index)=>{
+                  const sender= message?.sender;
+                  const selfId = userData?.data._id;
+                  if(sender._id === selfId){
+                    return <MessageFromUser message={message}  key={index}/>
+                  }else{
+                    return <MessageToUser message={message}  key={index}/>
+                  }
+                })
+              }
+
+deleed
+              <Stack flex={1} direction={'column-reverse'}  p={2} sx={{overflowY:'scroll'}}  className='chatArea' textAlign={'justify'} 
+               >
+              {
+                allMessages
+                ?.slice(0)
+                .reverse()
+                .map((message, index) => {
+                  const sender = message?.sender;
+                  const selfId = userData?.data._id;
+
+                  console.log(message);
+                  console.log("sender:"+sender?.name);
+              
+                  if (sender && sender._id === selfId) {
+                    return <MessageFromUser message={message?.content} key={index} />;
+                  } else {
+                    return <MessageToUser message={message?.content} key={index} />;
+                  }
+                })
+              }
+
+                {/* messages */}
+              {/* {message && <MessageFromUser message={message} />}
+                  
+                <MessageToUser  />
+                <ChatDateDivider /> */}
+                
+              {/* typing animation */}
+                { typing && <Box position={'fixed'} bottom={{xs:'10%',md:'13%'}} ><TypingAnimation /></Box>}
+              </Stack>

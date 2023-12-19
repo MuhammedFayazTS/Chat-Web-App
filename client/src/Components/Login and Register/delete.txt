@@ -1,0 +1,262 @@
+      <Stack direction={{ xs: 'column', md: 'row' }} height={"100%"} width={'100%'} alignItems={'center'} justifyContent={'center'} >
+
+        {/* /right section */}
+        <Box flex={{xs:1,md:.4}}>
+          <Stack
+            sx={{ height: "100%" }}
+            width={"100%"}
+            px={"15%"}
+            py={'10%'}
+            bgcolor={"rgba(255,255,255,0.3)"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            spacing={1}
+          >
+            <Lottie
+                  loop
+                  animationData={chatAppLogo}
+                  play
+                  style={{ width: '40%'}}
+              />
+            <Typography variant="h5" color={"#707070"}>
+              Log in to your account?
+            </Typography>
+
+            {/* Username */}
+            <FormControl sx={{  width: '100%' }} color='primary' variant="filled">
+              <InputLabel htmlFor="filled-adornment-user-name">
+                user name
+              </InputLabel>
+              <OutlinedInput
+                required
+                name='name'
+                onChange={changeHandler}
+                id="filled-adornment-weight"
+                endAdornment={<InputAdornment position="end">
+                  <PersonIcon />
+                </InputAdornment>}
+                aria-describedby="filled-weight-helper-text"
+                inputProps={{
+                  'aria-label': 'weight',
+                }}
+              />
+            </FormControl>
+
+            {/* password */}
+            <FormControl sx={{ m: 1, width: "100%" }} variant="filled" color='primary'>
+              <InputLabel htmlFor="filled-adornment-password">
+                Password
+              </InputLabel>
+              <OutlinedInput
+                name='password'
+                onChange={changeHandler}
+                id="filled-adornment-password"
+                type={showPassword ? "text" : "password"}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                    >
+                      {showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+              />
+            </FormControl>
+
+            <Stack
+              direction={"row"}
+              width={"100%"}
+              justifyContent={"space-between"}
+            >
+              <Typography
+                variant="span"
+                fontSize={14}
+                sx={{ color: "#999999" }}
+              >
+                New user?
+                <Typography
+                  variant="span"
+                  fontSize={14}
+                  color={"primary"}
+                  fontWeight={"500"}
+                  ml={0.3}
+                  sx={{ cursor: "pointer", ":hover": { color: "#2CB3B0" } }}
+                >
+                  <span onClick={() => location('/Register')}>Register</span>
+                </Typography>
+              </Typography>
+
+              <Typography
+                variant="span"
+                fontSize={14}
+                sx={{ color: "#999999", cursor: 'pointer' }}
+              >
+                forgot password?
+              </Typography>
+
+            </Stack>
+
+            <Button sx={{ display: { xs: 'none', md: 'block' } }} onClick={loginHandler} variant="contained" color="primary">
+              Login
+            </Button>
+
+            <Button sx={{ display: { xs: 'block', md: 'none' } }} onClick={loginHandler} variant="contained" color="primary">
+              Login
+            </Button>
+
+          </Stack>
+        </Box>
+      </Stack>
+
+
+      ///////Register
+
+
+
+       {/* <Stack direction={{xs:'column',md:'row'}} height={"100%"} width={'100%'} >
+        {/* left section */}
+        <Box flex={{xs:.15,md:.6}} >
+          <Stack
+            pt={"12%"}
+            px={"10%"}
+            sx={{ height: "100%" }}
+            bgcolor={"#31C2BF"}
+          >
+            <Typography variant="h4" fontWeight={700} color={"#EFF0FF"}>
+              Let's Chat
+            </Typography>
+            <Typography variant="p" fontSize={16} display={{xs:'none',md:'block'}} color={"#D3FFFE"}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Quibusdam et eligendi illo in. Dignissimos optio incidunt omnis?
+              Placeat velit ipsa sint. At, nostrum accusantium inventore quas
+              corporis sunt aliquam eos.
+            </Typography>
+            <Box my={2} display={{xs:'none',md:'block'}} width={"100%"} maxHeight={350}>
+              <img
+                src={chatImg}
+                width={"100%"}
+                height={"100%"}
+                alt="chat image"
+                style={{ objectFit: "contain", objectPosition: "center" }}
+              />
+            </Box>
+          </Stack>
+        </Box>
+
+        {/* /right section */}
+        <Box flex={{xs:1,md:.4}}>
+          <Stack
+            sx={{ height: "100%" }}
+            width={"100%"}
+            px={"15%"}
+            bgcolor={"#F2F2F2"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            spacing={3}
+          >
+            <Typography variant="h4" color={"secondary"}>
+              Register
+            </Typography>
+            
+
+                {/* Username */}
+                      <FormControl sx={{ m: 1, width: '100%' }} color='secondary' variant="filled">
+                          <InputLabel htmlFor="filled-adornment-username">
+                              user name
+                          </InputLabel>
+                          <FilledInput
+                              onChange={changeHandler}
+                              name='name'
+                              id="filled-adornment-username"
+                              endAdornment={<InputAdornment position="end">
+                                <IconButton  ><PersonIcon /></IconButton>
+                                </InputAdornment>}
+                              aria-describedby="filled-weight-helper-text"
+                              inputProps={{
+                                  'aria-label': 'weight',
+                              }}
+                          />
+                      </FormControl>
+
+                 {/* email */}
+                 <FormControl sx={{ m: 1, width: '100%' }} color='secondary' variant="filled">
+                          <InputLabel htmlFor="filled-adornment-email">
+                              email
+                          </InputLabel>
+                          <FilledInput
+                              onChange={changeHandler}
+                              name='email'
+                              id="filled-adornment-email"
+                              endAdornment={<InputAdornment position="end">
+                                <IconButton  ><AlternateEmailIcon /></IconButton>
+                                </InputAdornment>}
+                              aria-describedby="filled-weight-helper-text"
+                              inputProps={{
+                                  'aria-label': 'weight',
+                              }}
+                          />
+                      </FormControl>        
+
+                {/* password */}
+              <FormControl sx={{ m: 1, width: "100%" }} variant="filled" color='secondary'>
+                <InputLabel htmlFor="filled-adornment-password">
+                  Password
+                </InputLabel>
+                <FilledInput
+                  onChange={changeHandler}
+                  name='password'
+                  id="filled-adornment-password"
+                  type={showPassword ? "text" : "password"}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                />
+              </FormControl>
+
+              <Stack
+              direction={"row"}
+              width={"100%"}
+              justifyContent={"space-between"}
+            >
+              <Typography
+                variant="span"
+                fontSize={14}
+                sx={{ color: "#999999" }}
+              >
+                already a user?
+                <Typography
+                  variant="span"
+                  fontSize={14}
+                  color={"secondary"}
+                  fontWeight={"500"}
+                  ml={0.3}
+                  sx={{ cursor: "pointer", ":hover": { color: "#2CB3B0" } }}
+                >
+                  <span onClick={()=>location('/')}>login</span>
+                </Typography>
+              </Typography>
+
+            </Stack>
+
+            <Button sx={{display:{xs:'none',md:'block'}}} onClick={registerHandler} variant="contained" color="secondary">
+              Register
+            </Button>
+
+            <Button sx={{display:{xs:'block',md:'none'}}}  onClick={registerHandler} variant="contained" color="secondary">
+              Register
+            </Button>
+
+          </Stack>
+        </Box>
+      </Stack> */}

@@ -1,0 +1,10 @@
+  {/* for mobile devices */}
+        <Box sx={{display:{xs:'block',md:'none'}}}  width={'100%'} height={'100vh'} bgcolor={grey[800]} >
+                <Stack direction={'row'} width={'100%'} height={'100%'}  overflow={'hidden'}  sx={{bgcolor:blueGrey[500]}}>
+                    {/* <Sidebar setView={setView} view={view} /> */}
+                    {/* <UsersListingArea/> */}
+                    <ChatArea  setView={setView}/>
+                    {/* <ProfileSection setView={setView} view={view} /> */}
+                    {/* <BottomNavBar /> */}
+                </Stack>
+        </Box>
