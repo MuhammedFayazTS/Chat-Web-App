@@ -17,7 +17,6 @@ const allMessages = expressAsyncHandler(async (req, res) => {
     }
   });
 
-
   const sendMessages = expressAsyncHandler(async (req, res) => {
     const { content, chatId } = req.body;
   
