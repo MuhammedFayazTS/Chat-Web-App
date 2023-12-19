@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon Server/index.js",
-    "server": "nodemon Server/index.js",
+    "start": "node Server/index.js",
+    "server": "node Server/index.js",
     "build": "npm install && npm install nodemon --save-dev  && npm install --prefix client && npm run build --prefix client "
   },
   "keywords": [],
