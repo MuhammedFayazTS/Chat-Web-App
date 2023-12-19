@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon Server/index.js",
     "server": "nodemon Server/index.js",
-    "build": "npm install && sudo npm install -g nodemon  && npm install --prefix client && npm run build --prefix client "
+    "build": "npm install && npm install -D nodemon  && npm install --prefix client && npm run build --prefix client "
   },
   "keywords": [],
   "author": "",
