@@ -45,7 +45,8 @@ function Login() {
           "Content-Type": "application/json",
         },
       };
-      const response = await axios.post('http://localhost:5000/user/login', data, config)
+      // const response = await axios.post('http://localhost:5000/user/login', data, config)
+      const response = await axios.post('https://connectify-a1zv.onrender.com/user/login', data, config)
       // console.log(response);
       setSignInStatus({ msg: 'Success', key: Math.random() })
       localStorage.setItem("userData", JSON.stringify(response))
