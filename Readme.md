@@ -45,16 +45,18 @@ Key features include group management, convenient group joining via links, and u
    - React: For the frontend interface
    - Node.js: For server-side scripting
 
-2. **Authentication and Security:**
+2. **State Management:**
+   - Redux: For managing application state
+
+3. **Authentication and Security:**
    - JWT (JSON Web Tokens): For secure user authentication
    - Bcrypt.js: For robust password encryption
 
-3. **Real-time Communication:**
+4. **Real-time Communication:**
    - Socket.IO: Implementation for websockets enabling real-time messaging
 
-4. **Image Storage:**
+5. **Image Storage:**
    - Cloudinary: Utilized for storing and managing images within the application
-
 
 ## Getting Started
 
