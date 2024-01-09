@@ -25,13 +25,13 @@
 
 ## About The Project
 
-![Screen Shot](https://i.postimg.cc/HjdH5Sb2/Screenshot-2024-01-09-112638.png)
-
-![Image 2](https://i.postimg.cc/z37Nknj1/Screenshot-2024-01-09-112656.png)
-*Description for Image 2*
-
-![Image 3](https://i.postimg.cc/ZCDhG427/Screenshot-2024-01-09-112726.png) 
-*Description for Image 3*
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="https://i.postimg.cc/HjdH5Sb2/Screenshot-2024-01-09-112638.png" alt="Screen Shot" style="width: 300px; height: auto; margin-right: 20px;">
+  
+  <img src="https://i.postimg.cc/z37Nknj1/Screenshot-2024-01-09-112656.png" alt="Image 2" style="width: 300px; height: auto; margin-right: 20px;">
+  
+  <img src="https://i.postimg.cc/ZCDhG427/Screenshot-2024-01-09-112726.png" alt="Image 3" style="width: 300px; height: auto;">
+</div>
 
 This chat application, powered by the MERN stack, delivers a secure, interactive platform for smooth communication. Using JWT authentication and Bcrypt.js, it prioritizes user privacy. With Socket.IO, users engage in real-time chats—both one-on-one and group discussions.
 
