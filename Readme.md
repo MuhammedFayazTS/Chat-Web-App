@@ -27,6 +27,12 @@
 
 ![Screen Shot](https://i.postimg.cc/HjdH5Sb2/Screenshot-2024-01-09-112638.png)
 
+![Image 2](https://i.postimg.cc/z37Nknj1/Screenshot-2024-01-09-112656.png)
+*Description for Image 2*
+
+![Image 3](https://i.postimg.cc/ZCDhG427/Screenshot-2024-01-09-112726.png) 
+*Description for Image 3*
+
 This chat application, powered by the MERN stack, delivers a secure, interactive platform for smooth communication. Using JWT authentication and Bcrypt.js, it prioritizes user privacy. With Socket.IO, users engage in real-time chats—both one-on-one and group discussions.
 
 Key features include group management, convenient group joining via links, and user profile editing. Cloudinary integration ensures efficient image storage, enhancing the overall user experience. It's designed for user-friendly, secure communication, adept at both individual and group interactions with seamless real-time messaging.
